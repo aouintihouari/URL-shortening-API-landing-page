@@ -55,7 +55,11 @@ export default function ShortenLinkForm({ onLinksList, onLink, link }) {
         {error && link === "" && (
           <p className="my-1 text-red-500 italic md:hidden">{error}</p>
         )}
-        <button className="bg-cyan h-[48px] cursor-pointer rounded-[5px] font-bold text-white transition duration-1000 hover:brightness-115 md:w-2/12">
+        <button
+          onSubmit={handleSubmit}
+          type="submit"
+          className="bg-cyan h-[48px] cursor-pointer rounded-[5px] font-bold text-white transition duration-1000 hover:brightness-115 md:w-2/12"
+        >
           Shorten it!
         </button>
       </div>
